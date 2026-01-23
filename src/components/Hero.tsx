@@ -59,7 +59,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl font-medium text-primary mb-4"
           >
-            AI Engineer | Data Analyst | Cybersecurity & Automation Developer
+            AI Engineer | Data Analyst
           </motion.p>
 
           {/* Description */}

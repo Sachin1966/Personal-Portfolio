@@ -23,23 +23,28 @@ const experiences = [
 const certifications = [
   {
     icon: GraduationCap,
-    title: "Machine Learning & Deep Learning",
-    description: "Comprehensive training in neural networks, CNN, RNN, and advanced ML algorithms.",
+    title: "Prompt Engineering",
+    description: "AWS certification in prompt engineering techniques and best practices.",
   },
   {
     icon: Award,
-    title: "Data Analytics with SQL & Power BI",
-    description: "Expertise in data visualization, business intelligence, and analytical reporting.",
+    title: "Database Management Systems",
+    description: "Udemy certification in DBMS concepts and SQL database management.",
   },
   {
     icon: Briefcase,
-    title: "Cybersecurity Fundamentals",
-    description: "Knowledge in threat detection, digital forensics, and security best practices.",
+    title: "AI for Leadership",
+    description: "Udemy certification on leveraging AI for strategic leadership and decision making.",
   },
   {
     icon: Award,
-    title: "Python Full Stack",
-    description: "End-to-end development with Flask, Django, and modern frontend technologies.",
+    title: "Foundation of Data Analytics",
+    description: "LinkedIn Learning certification in data analytics fundamentals.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Fundamentals of Web Development",
+    description: "LinkedIn Learning certification in modern web development practices.",
   },
 ];
 

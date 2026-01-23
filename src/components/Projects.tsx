@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, ChevronRight } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -209,13 +209,16 @@ const Projects = () => {
 
                   {/* Actions */}
                   <div className="flex gap-3">
-                    <Button size="sm" variant="ghost" className="text-primary hover:bg-primary/10">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" variant="ghost" className="text-accent hover:bg-accent/10">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
+                    <Button 
+                      size="sm" 
+                      variant="ghost" 
+                      className="text-primary hover:bg-primary/10"
+                      asChild
+                    >
+                      <a href="https://github.com/Sachin1966" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Code
+                      </a>
                     </Button>
                   </div>
                 </motion.div>

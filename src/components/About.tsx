@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Brain, Database, Shield, Sparkles } from "lucide-react";
+import { Brain, Database, Sparkles } from "lucide-react";
 
 const highlights = [
   {
@@ -13,11 +13,6 @@ const highlights = [
     icon: Database,
     title: "Data Analytics",
     description: "Strong skills in SQL, Power BI, and data-driven decision making",
-  },
-  {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Building secure systems with threat detection and forensic analysis",
   },
   {
     icon: Sparkles,
@@ -66,7 +61,7 @@ const About = () => {
                 lies in building intelligent systems that solve real-world problems.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With experience in developing real-world AI systems, security tools, analytics 
+                With experience in developing real-world AI systems, analytics 
                 dashboards, and automation platforms, I bring a comprehensive approach to every project.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
