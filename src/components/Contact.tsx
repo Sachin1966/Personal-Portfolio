@@ -49,7 +49,7 @@ const Contact = () => {
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:Asachin1966@gmail.com",
+      href: "mailto:asachin1966@gmail.com",
       color: "hover:text-primary",
     },
   ];
@@ -164,7 +164,7 @@ const Contact = () => {
                 
                 <div className="space-y-4 mb-8">
                   <a
-                    href="mailto:Asachin1966@gmail.com"
+                    href="mailto:asachin1966@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -172,7 +172,7 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-sm text-muted-foreground">Email</p>
-                      <p className="font-medium">Asachin1966@gmail.com</p>
+                      <p className="font-medium">asachin1966@gmail.com</p>
                     </div>
                     <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </a>

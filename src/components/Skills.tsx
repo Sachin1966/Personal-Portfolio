@@ -1,8 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { 
-  Brain, Database, Server, Layout, Shield, Wrench,
-  Cpu, BarChart3, Code2, Globe, Lock, Terminal
+  Brain, Database, Server, Layout, Wrench,
+  BarChart3
 } from "lucide-react";
 
 const skillCategories = [
@@ -53,24 +53,14 @@ const skillCategories = [
     ],
   },
   {
-    title: "Cyber & Systems",
-    icon: Shield,
-    color: "from-red-500 to-rose-500",
-    skills: [
-      { name: "Digital Forensics", level: 80 },
-      { name: "Threat Detection", level: 85 },
-      { name: "Log Analysis", level: 85 },
-      { name: "Telemetry", level: 80 },
-    ],
-  },
-  {
     title: "Tools & Platforms",
     icon: Wrench,
     color: "from-indigo-500 to-violet-500",
     skills: [
       { name: "Git", level: 90 },
       { name: "Docker", level: 75 },
-      { name: "Linux", level: 85 },
+      { name: "VS Code", level: 90 },
+      { name: "PyCharm", level: 85 },
       { name: "OpenCV", level: 80 },
       { name: "APIs", level: 85 },
     ],
@@ -123,8 +113,7 @@ const Skills = () => {
               My <span className="gradient-text">Technical Arsenal</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit spanning AI/ML, data analytics, full-stack development, 
-              and cybersecurity.
+              A comprehensive toolkit spanning AI/ML, data analytics, and full-stack development.
             </p>
           </motion.div>
 
