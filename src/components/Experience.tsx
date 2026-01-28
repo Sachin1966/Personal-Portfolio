@@ -4,6 +4,11 @@ import { Briefcase, GraduationCap, Award, Rocket, Target, Lightbulb } from "luci
 
 const experiences = [
   {
+    icon: Briefcase,
+    title: "ML Intern at Cognifyz Technologies",
+    description: "Worked on end-to-end machine learning pipelines, including data preprocessing, model training, and evaluation. Implemented predictive models and collaborated on integrating AI solutions into real-world applications.",
+  },
+  {
     icon: Rocket,
     title: "15+ Real-World Projects",
     description: "Built comprehensive AI, data analytics, and system projects solving real-world problems across healthcare, security, and smart cities.",

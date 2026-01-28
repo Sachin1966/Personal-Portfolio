@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 grid-pattern opacity-30" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-slow" />
-      
+
       {/* Floating Elements */}
       <motion.div
         className="absolute top-1/3 left-1/4 w-2 h-2 bg-primary rounded-full"
@@ -59,7 +59,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl font-medium text-primary mb-4"
           >
-            AI Engineer | Data Analyst
+            AI Engineer | Data Analyst | Fullstack Engineer
           </motion.p>
 
           {/* Description */}
@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-10 text-balance"
           >
-            I build intelligent systems that analyze, detect, automate, and protect 
+            I build intelligent systems that analyze, detect, automate, and protect
             using AI, ML, data analytics, and secure software engineering.
           </motion.p>
 

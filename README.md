@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Sachin A - AI Engineer Portfolio
 
-## Project info
+A modern, high-performance portfolio website built to showcase my work as an AI Engineer, Data Analyst, and Full-Stack Developer. This project features a responsive design, interactive animations, and a clean professional aesthetic.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![Project Preview](https://img.shields.io/badge/Status-Active-success)
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+- **Interactive UI**: Built with React and Framer Motion for smooth transitions and animations.
+- **Responsive Design**: Fully optimized for extensive device support (Mobile, Tablet, Desktop).
+- **Project Showcase**: Filterable project gallery with direct links to GitHub repositories.
+- **Experience Timeline**: Visual display of professional journey and certifications.
+- **Contact Form**: Functional contact form integrated with Formspree.
+- **Modern Tech Stack**: Utilizes the latest web technologies for speed and maintainability.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Ready for Vercel/Netlify
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Project Structure
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/         # Reusable UI components
+│   ├── ui/            # shadcn/ui primitives
+│   ├── Hero.tsx       # Landing section
+│   ├── Projects.tsx   # Project grid with filtering
+│   ├── Experience.tsx # Timeline and certifications
+│   ├── Contact.tsx    # Contact form
+│   └── ...
+├── pages/             # Page layouts
+├── hooks/             # Custom React hooks
+└── lib/               # Utilities
+public/
+└── resume.pdf         # Resume file (downloadable)
 ```
 
-**Edit a file directly in GitHub**
+## ⚡ Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v18 or higher)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Sachin1966/sachin-a.-ai-portfolio.git
+    cd sachin-a.-ai-portfolio
+    ```
 
-This project is built with:
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
 
-## How can I deploy this project?
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## ⚙️ Configuration
 
-## Can I connect a custom domain to my Lovable project?
+### 1. Resume Download
+Place your actual PDF resume in the `public` folder and name it `resume.pdf`.
+- File path: `/public/resume.pdf`
 
-Yes, you can!
+### 2. Contact Form Setup
+The contact form is pre-configured to use [Formspree](https://formspree.io).
+1.  Sign up for a free account at Formspree.
+2.  Create a new form and copy the **Form ID**.
+3.  Open `src/components/Contact.tsx`.
+4.  Replace `"YOUR_FORM_ID"` with your actual ID:
+    ```typescript
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xyzaabbcc";
+    ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Sachin A**
+- Email: asachin1966@gmail.com
+- GitHub: [https://github.com/Sachin1966](https://github.com/Sachin1966)
+- LinkedIn: [https://www.linkedin.com/in/sachin-a-293368294](https://www.linkedin.com/in/sachin-a-293368294)
+
+---
+© 2026 Sachin A. All Rights Reserved.

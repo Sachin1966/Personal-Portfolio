@@ -17,20 +17,57 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
 
+  // TODO: Replace with your actual Formspree form ID
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        // Fallback for demo purposes if no ID is set
+        if (FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")) {
+          // Simulate success for demo
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          toast({
+            title: "Demo Message sent!",
+            description: "To make this real, replace 'YOUR_FORM_ID' in Contact.tsx with your Formspree ID.",
+          });
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          toast({
+            title: "Error",
+            description: "Something went wrong. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -57,7 +94,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 md:py-32 relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
+
       {/* Background Effects */}
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
@@ -78,7 +115,7 @@ const Contact = () => {
               Let's Build Something <span className="gradient-text">Amazing</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Have a project in mind or want to collaborate? I'd love to hear from you. 
+              Have a project in mind or want to collaborate? I'd love to hear from you.
               Drop me a message and let's create something extraordinary together.
             </p>
           </motion.div>
@@ -161,7 +198,7 @@ const Contact = () => {
             >
               <div className="p-8 rounded-2xl glass-card">
                 <h3 className="text-xl font-semibold mb-6">Connect With Me</h3>
-                
+
                 <div className="space-y-4 mb-8">
                   <a
                     href="mailto:asachin1966@gmail.com"

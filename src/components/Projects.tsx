@@ -13,6 +13,7 @@ const projects = [
     features: ["Multi-disease prediction", "Risk scoring", "Dashboard"],
     category: "AI/ML",
     gradient: "from-blue-500/20 to-cyan-500/20",
+    githubUrl: "https://github.com/Sachin1966/Multi-Organ-Disease-Detector",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const projects = [
     features: ["File analysis", "Threat logs", "Anomaly detection"],
     category: "Security",
     gradient: "from-red-500/20 to-orange-500/20",
+    githubUrl: "https://github.com/Sachin1966/Cyber-Forensic-Toolkit",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const projects = [
     features: ["Real-time detection", "Alert system", "Threat analysis"],
     category: "Security",
     gradient: "from-rose-500/20 to-pink-500/20",
+    githubUrl: "https://github.com/Sachin1966/Cybersecurity-Threat-Detection",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const projects = [
     features: ["Delay prediction", "Safety insights", "Route optimization"],
     category: "AI/ML",
     gradient: "from-green-500/20 to-emerald-500/20",
+    githubUrl: "https://github.com/Sachin1966/RailFlow-AI",
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ const projects = [
     features: ["Logs collection", "CPU/memory tracking", "Alerts"],
     category: "Tools",
     gradient: "from-purple-500/20 to-violet-500/20",
+    githubUrl: "https://github.com/Sachin1966/Telemetry-Agent",
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const projects = [
     features: ["Drift detection", "Retraining", "Performance alerts"],
     category: "AI/ML",
     gradient: "from-indigo-500/20 to-blue-500/20",
+    githubUrl: "https://github.com/Sachin1966/AegisML",
   },
   {
     id: 7,
@@ -67,6 +73,7 @@ const projects = [
     features: ["Traffic analysis", "Pollution metrics", "Population insights"],
     category: "Analytics",
     gradient: "from-teal-500/20 to-cyan-500/20",
+    githubUrl: "https://github.com/Sachin1966/Urban-Analytics",
   },
   {
     id: 8,
@@ -76,6 +83,7 @@ const projects = [
     features: ["KPI dashboards", "Forecasting", "Data visualization"],
     category: "Analytics",
     gradient: "from-amber-500/20 to-yellow-500/20",
+    githubUrl: "https://github.com/Sachin1966/InsightFlow",
   },
   {
     id: 9,
@@ -85,6 +93,7 @@ const projects = [
     features: ["Real-time conversion", "Multiple styles", "Batch processing"],
     category: "AI/ML",
     gradient: "from-gray-500/20 to-slate-500/20",
+    githubUrl: "https://github.com/Sachin1966/Pencil-Sketch-Generator",
   },
   {
     id: 10,
@@ -94,6 +103,7 @@ const projects = [
     features: ["Issue/return", "Fine calculation", "Admin login"],
     category: "Tools",
     gradient: "from-orange-500/20 to-red-500/20",
+    githubUrl: "https://github.com/Sachin1966/Library-Management-System",
   },
 ];
 
@@ -104,14 +114,14 @@ const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
+  const filteredProjects = activeCategory === "All"
+    ? projects
     : projects.filter(p => p.category === activeCategory);
 
   return (
     <section id="projects" className="py-24 md:py-32 relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
+
       <div className="container mx-auto px-4 md:px-6">
         <div ref={ref} className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -128,7 +138,7 @@ const Projects = () => {
               Featured <span className="gradient-text">Projects</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A collection of AI, data analytics, and security projects that showcase 
+              A collection of AI, data analytics, and security projects that showcase
               my technical expertise and problem-solving abilities.
             </p>
           </motion.div>
@@ -144,11 +154,10 @@ const Projects = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
                     ? "bg-primary text-primary-foreground neon-glow"
                     : "bg-muted hover:bg-muted/80 text-muted-foreground"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -156,7 +165,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
+          <motion.div
             layout
             className="grid md:grid-cols-2 gap-6"
           >
@@ -209,13 +218,13 @@ const Projects = () => {
 
                   {/* Actions */}
                   <div className="flex gap-3">
-                    <Button 
-                      size="sm" 
-                      variant="ghost" 
+                    <Button
+                      size="sm"
+                      variant="ghost"
                       className="text-primary hover:bg-primary/10"
                       asChild
                     >
-                      <a href="https://github.com/Sachin1966" target="_blank" rel="noopener noreferrer">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         Code
                       </a>
